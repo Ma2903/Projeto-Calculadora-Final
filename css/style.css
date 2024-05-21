@@ -1,0 +1,122 @@
+body{
+    margin: 0 auto;
+    font-family:Verdana, sans-serif;
+}
+
+/*------- CABEÇALHO --------*/
+header{
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    background-color: rgb(196, 128, 201);
+    display: table;
+}
+
+header h1{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+/*------ FIM CABEÇALHO -----*/
+
+/*---------- MENU ----------*/
+.menu{
+    width: 100%;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    background-color: rgb(115, 115, 115)
+}
+
+.menu ul li{
+    display: inline; /*Cada li (item do menu) um ao lado do outro*/
+}
+
+.menu ul li a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block; /*Permite bloco li a totalmente clicavel*/
+    transition: background .4s;
+}
+
+.menu ul li a:hover{
+    background-color: rgb(196, 128, 201);
+}
+/*-------- FIM MENU --------*/
+
+/*-------- CONTEUDO --------*/
+.div-conteudo{
+    height: 200px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    width: 60%;
+    height: 300px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.div-conteudo label, input, select{
+    width: 40%;
+    height:100px;
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-conteudo #botao{
+    background-color: rgb(115, 115, 115);
+    cursor: pointer;
+}
+
+#botao:hover{
+    background-color: rgb(196, 128, 201);
+    cursor: pointer;
+}
+
+.div-conteudo img{
+    width: 15%;
+    height: px;
+}
+/*------ FIM CONTEÚDO ------*/
+
+            /* FORM */
+form input{
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+form select{
+    border-radius: 5px;
+}
+
+/*--------- RODAPE ---------*/
+footer{
+    width: 100%;
+    height: 130px;
+    background-color: rgb(196, 128, 201);
+    position: absolute;
+	bottom: 0;
+}
+
+footer p{
+    text-align: center;
+}
+/*------- FIM RODAPE -------*/
