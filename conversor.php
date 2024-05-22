@@ -23,12 +23,13 @@
     </nav>
     
     <div class="div-conteudo">
-        <form method="POST" action="logica/processamento.php">
-            <label>Digite uma temperatura:</label>
-            <input type="text" name="Temp" placeholder="Digite uma temperatura">
+        <form method="GET" action="logica/processamento.php">
+            <label>Digite uma valor em medida de comprimento:</label>
+            <input type="text" name="Medida" placeholder="Digite um valor em medida de comprimento">
             <select name="selectOperacoes">
-                <option value="CelFah"> Celsius para Fahrenheit </option>
-                <option value="FahCel"> Fahrenheit para Celsius </option>
+                <option value="CenMet"> Centímetros para Metros </option>
+                <option value="MetCen"> Metros para Centímetros </option>
+                <option value="MetKm"> Metros para Quilômetros </option>
             </select>
             <input id="botao" type="submit" value="Calcular">
         </form>

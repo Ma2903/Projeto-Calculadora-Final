@@ -23,5 +23,16 @@
     function fahrenheitToCelsius($temperature) {
         return ($temperature - 32) * 5/9;
     }
+    //conversor
+    function converterCentimetrosParaMetros($medida) {
+        return $medida / 100;
+    }
+    
+    function converterMetrosParaCentimetros($medida) {
+        return $medida * 100;
+    }
 
+    function converterMetrosParaQuilometros($medida) {
+        return $medida / 1000;
+    }
 ?>

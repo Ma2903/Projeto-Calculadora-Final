@@ -1,5 +1,6 @@
 <?php
     session_start();
+    session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -17,7 +18,7 @@
             <li><a href="https://www.fatecpp.edu.br/">Sobre</a></li>
             <li><a href="index.php">Calculadora</a></li>
             <li><a href="temperatura.php">Temperatura</a></li>
-            <li><a href="conversao.php">Conversão</a></li>
+            <li><a href="conversor.php">Conversão</a></li>
         </ul>
     </nav>
     

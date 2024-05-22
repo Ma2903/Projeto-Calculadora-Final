@@ -27,23 +27,45 @@
     die();
     }
     //temperatura
-    $result = "";
-    $temperature = "";
-    
-    if (isset($_POST["Temp"])){
-
-        $temperature = $_POST['Temp'];
+        $result = "";
+        $temperature = "";
         
-        if ($_POST['selectOperacoes'] == "CelFah"){
-            $result = celsiusToFahrenheit($temperature);
-            echo "<p> $temperature °C é igual a $result °F </p>";
+        if (isset($_POST["Temp"])){
+
+            $temperature = $_POST['Temp'];
+            
+            if ($_POST['selectOperacoes'] == "CelFah"){
+                $result = "<p> $temperature °C é igual a $result °F </p>" . "=" . celsiusToFahrenheit($temperature);
+            }
+            else if ($_POST['selectOperacoes'] == "FahCel"){
+                $result = "<p> $temperature °F é igual a $result °C </p>" . "=" . fahrenheitToCelsius($temperature);
+            }
+            $_SESSION ["resultado"] = $result;
+            header("location:../temperatura.php"); 
+            die();
         }
-         elseif ($_POST['selectOperacoes'] == "FahCel"){
-            $result = fahrenheitToCelsius($temperature);
-            echo "<p> $temperature °F é igual a $result °C </p>";
-        }
+    //conversor
+        $result = "";
+        $medida = "";
+        if(isset($_GET['Medida'])) {
+
+            $medida = floatval($_GET['Medida']);
+            
+            if ($_GET['selectOperacoes'] == 'CenMet') {
+                $result = "$medida centímetros é igual a $result metros" . "=" . converterCentimetrosParaMetros($medida);
+            } else if ($_GET['selectOperacoes'] == 'MetCen') {
+                $result = "$medida metros é igual a $result centímetros" . "=" . converterMetrosParaCentimetros($medida);
+            } else if ($_GET['selectOperacoes'] == 'MetKm') {
+                $result = "$medida metros é igual a $result quilômetros" . "=" . converterMetrosParaQuilometros($medida);
+            }
+            else {
+                echo "Conversão não suportada.";
+            }
+            }
+            else {
+            echo "Por favor, preencha todos os campos.";
+            }
         $_SESSION ["resultado"] = $result;
-        header("location:../temperatura.php"); //redireciona para uma página especifica
+        header("location:../conversor.php"); 
         die();
-    }
 ?>
