@@ -35,10 +35,10 @@
             $temperature = $_POST['Temp'];
             
             if ($_POST['selectOperacoes'] == "CelFah"){
-                $result = "<p> $temperature °C é igual a $result °F </p>" . "=" . celsiusToFahrenheit($temperature);
+                $result = "$temperature °C é igual a $result °F" . "=" . celsiusToFahrenheit($temperature);
             }
             else if ($_POST['selectOperacoes'] == "FahCel"){
-                $result = "<p> $temperature °F é igual a $result °C </p>" . "=" . fahrenheitToCelsius($temperature);
+                $result = "$temperature °F é igual a $result °C" . "=" . fahrenheitToCelsius($temperature);
             }
             $_SESSION ["resultado"] = $result;
             header("location:../temperatura.php"); 
@@ -52,11 +52,13 @@
             $medida = floatval($_GET['Medida']);
             
             if ($_GET['selectOperacoes'] == 'CenMet') {
-                $result = "$medida centímetros é igual a $result metros" . "=" . converterCentimetrosParaMetros($medida);
+                $result = "$medida centímetros é " . "= " . converterCentimetrosParaMetros($medida) . " metros";
             } else if ($_GET['selectOperacoes'] == 'MetCen') {
-                $result = "$medida metros é igual a $result centímetros" . "=" . converterMetrosParaCentimetros($medida);
+                $result = "$medida metros é " . "= " . converterMetrosParaCentimetros($medida) . " centímetros";
             } else if ($_GET['selectOperacoes'] == 'MetKm') {
-                $result = "$medida metros é igual a $result quilômetros" . "=" . converterMetrosParaQuilometros($medida);
+                $result = "$medida metros é " . "= " . converterMetrosParaQuilometros($medida) . " quilômetros";
+            } else if ($_GET['selectOperacoes'] == 'KmMet') {
+                $result = "$medida quilômetros é " . "= " . converterQuilometrosParaMetros($medida) . " metros";
             }
             else {
                 echo "Conversão não suportada.";

@@ -1,122 +1,127 @@
-body{
-    margin: 0 auto;
-    font-family:Verdana, sans-serif;
-}
-
-/*------- CABEÇALHO --------*/
-header{
-    width: 100%;
-    height: 100px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: rgb(196, 128, 201);
-    display: table;
+    background-color: #f8f8f8;
+    color: #333333;
 }
 
-header h1{
+header {
+    background-color: #337ab7; 
+    color: #ffffff;
+    padding: 10px 0;
     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0 auto;
-}
-/*------ FIM CABEÇALHO -----*/
-
-/*---------- MENU ----------*/
-.menu{
-    width: 100%;
 }
 
-.menu ul{
-    list-style: none;
+.menu ul {
+    background-color: #337ab7;
+    overflow: hidden;
+    color: #ffffff;
     padding: 0;
-    margin: 0 auto;
-    background-color: rgb(115, 115, 115)
+    text-align: center;
+    margin: 0;
 }
 
-.menu ul li{
-    display: inline; /*Cada li (item do menu) um ao lado do outro*/
-}
-
-.menu ul li a{
-    color:rgb(255, 255, 255);
+.menu li {
+    display: inline-block;
+    color: #ffffff;
+    padding: 14px 16px;
     text-decoration: none;
+}
+
+.menu li a {
+    color: #ffffff;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #286090; 
+}
+
+
+.div-conteudo {
+    margin: 10px;
+    background-color: #ffffff; 
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.div-conteudo img {
+    margin: 0 auto; 
+    display: block;
+}
+form {
+    margin: 20px auto;
+    width: 50%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
     padding: 20px;
-    display: inline-block; /*Permite bloco li a totalmente clicavel*/
-    transition: background .4s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 280px; 
 }
 
-.menu ul li a:hover{
-    background-color: rgb(196, 128, 201);
-}
-/*-------- FIM MENU --------*/
-
-/*-------- CONTEUDO --------*/
-.div-conteudo{
-    height: 200px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+    font-weight: bold;
 }
 
-form{
-    width: 60%;
-    height: 300px;
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1%;
-}
-
-.div-conteudo label, input, select{
-    width: 40%;
-    height:100px;
-    margin: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.div-conteudo #botao{
-    background-color: rgb(115, 115, 115);
-    cursor: pointer;
-}
-
-#botao:hover{
-    background-color: rgb(196, 128, 201);
-    cursor: pointer;
-}
-
-.div-conteudo img{
-    width: 15%;
-    height: px;
-}
-/*------ FIM CONTEÚDO ------*/
-
-            /* FORM */
-form input{
+form input[type="text"], form select {
+    display: block;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80%; 
     border-radius: 5px;
-    font-size: 15px;
+    border: 3px solid #337ab7;
+    background-color: #f1f1f1;
 }
 
-form select{
+form input[type="submit"] {
+    padding: 10px;
+    color: #ffffff;
+    background-color: #337ab7;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-/*--------- RODAPE ---------*/
-footer{
-    width: 100%;
-    height: 130px;
-    background-color: rgb(196, 128, 201);
-    position: absolute;
-	bottom: 0;
+form input[type="submit"]:hover {
+    background-color: #286090;
 }
 
-footer p{
+#result {
+    font-size: 16px;
+    width: 30%;
+    font-weight: bold;
+    color: #337ab7;
+    margin-top: 20px;
+    padding: 8px;
+    border: 2px solid #337ab7;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#result::after {
+    margin-left: 10px;
+}
+
+#result::before {
+    content: "Resultado:";
+    font-weight: normal;
+    color: #333333;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #337ab7; 
+    color: #ffffff;
     text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
-/*------- FIM RODAPE -------*/

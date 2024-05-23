@@ -29,19 +29,20 @@
             <select name="selectOperacoes">
                 <option value="CenMet"> Centímetros para Metros </option>
                 <option value="MetCen"> Metros para Centímetros </option>
+                <option value="KmMet"> Quilômetros para Metros </option>
                 <option value="MetKm"> Metros para Quilômetros </option>
             </select>
             <input id="botao" type="submit" value="Calcular">
+            <label id="result"> 
+                <?php
+                    if (isset($_SESSION["resultado"]))
+                    {
+                        //caso exista
+                        echo $_SESSION["resultado"];
+                    }
+                ?>
+            </label>
         </form>
-        <h1 id="result">
-            <?php
-                if (isset($_SESSION["resultado"]))
-                {
-                    //caso exista
-                    echo $_SESSION["resultado"];
-                }
-            ?>
-        </h1>
         <img src="img/google-play.png">
     </div>
     <footer>

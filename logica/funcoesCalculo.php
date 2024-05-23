@@ -35,4 +35,8 @@
     function converterMetrosParaQuilometros($medida) {
         return $medida / 1000;
     }
+
+    function converterQuilometrosParaMetros($medida) {
+        return $medida * 1000;
+    }
 ?>

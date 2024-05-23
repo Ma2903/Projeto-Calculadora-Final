@@ -31,16 +31,16 @@
                 <option value="FahCel"> Fahrenheit para Celsius </option>
             </select>
             <input id="botao" type="submit" value="Calcular">
+            <label id="result"> 
+                <?php
+                    if (isset($_SESSION["resultado"]))
+                    {
+                        //caso exista
+                        echo $_SESSION["resultado"];
+                    }
+                ?>
+            </label>
         </form>
-        <h1 id="result">
-            <?php
-                if (isset($_SESSION["resultado"]))
-                {
-                    //caso exista
-                    echo $_SESSION["resultado"];
-                }
-            ?>
-        </h1>
         <img src="img/google-play.png">
     </div>
     <footer>
